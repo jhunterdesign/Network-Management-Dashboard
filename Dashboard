@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 1rem;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem;
+            display: block;
+        }
+
+        nav ul li a:hover {
+            background-color: #575757;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 0.5rem;
+            text-align: left;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin: 0.5rem 0;
+        }
+
+        form input {
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            align-self: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Network Management Dashboard</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#dashboard">Dashboard</a></li>
+            <li><a href="#connected-devices">Connected Devices</a></li>
+            <li><a href="#network-security">Network Security</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="dashboard">
+            <h2>Dashboard Overview</h2>
+            <div class="card">
+                <h3>Total Connected Devices</h3>
+                <p>5</p>
+            </div>
+            <div class="card">
+                <h3>Network Status</h3>
+                <p>Online</p>
+            </div>
+        </section>
+        <section id="connected-devices">
+            <h2>Connected Devices</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Device Name</th>
+                        <th>IP Address</th>
+                        <th>MAC Address</th>
+                        <th>Connection Time</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Laptop</td>
+                        <td>192.168.0.2</td>
+                        <td>00:1A:2B:3C:4D:5E</td>
+                        <td>02:15:30</td>
+                    </tr>
+                    <tr>
+                        <td>Smartphone</td>
+                        <td>192.168.0.3</td>
+                        <td>00:1B:2C:3D:4E:5F</td>
+                        <td>01:10:45</td>
+                    </tr>
+                    <tr>
+                        <td>Tablet</td>
+                        <td>192.168.0.4</td>
+                        <td>00:1C:2D:3E:4F:5G</td>
+                        <td>03:20:55</td>
+                    </tr>
+                    <tr>
+                        <td>Desktop</td>
+                        <td>192.168.0.5</td>
+                        <td>00:1D:2E:3F:4G:5H</td>
+                        <td>05:25:10</td>
+                    </tr>
+                    <tr>
+                        <td>Smart TV</td>
+                        <td>192.168.0.6</td>
+                        <td>00:1E:2F:3G:4H:5I</td>
+                        <td>02:50:20</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <section id="network-security">
+            <h2>Network Security</h2>
+            <ul>
+                <li>New device connected: Smartphone</li>
+                <li>Suspicious activity detected on IP: 192.168.0.3 (High bandwidth usage)</li>
+                <li>Multiple failed login attempts from IP: 192.168.0.4</li>
+                <li>Device with MAC address 00:1F:2G:3H:4I:5J attempting to access restricted port 22</li>
+                <li>Communication with known malicious IP: 203.0.113.45 detected</li>
+            </ul>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <form>
+                <label for="ssid">SSID:</label>
+                <input type="text" id="ssid" name="ssid" value="MyNetwork">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" value="password123">
+                <button type="submit">Save Settings</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
